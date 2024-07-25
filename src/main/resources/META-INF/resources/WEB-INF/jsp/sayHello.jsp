@@ -5,6 +5,6 @@
 		</title>
 	</head>
 	<body>
-		Hey there, SHRUNAL is here!
+		Hey there, ${name} is here!
 	</body>
 </html>
