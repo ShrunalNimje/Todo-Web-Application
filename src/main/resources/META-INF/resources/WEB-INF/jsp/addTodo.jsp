@@ -16,6 +16,7 @@
 				
 					<form:input type = "hidden" path = "id"/>
 					<form:input type = "hidden" path = "done"/>
+					<form:input type = "hidden" path = "targetDate"/>
 					<input type = "submit" class = "btn btn-success"/>
 					
 					<form:errors type = "text" path = "description" cssClass="text-warning"/>
