@@ -34,22 +34,22 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value = "add-todos", method = RequestMethod.GET)
-	public String addNewTods(ModelMap model) {
+	public String addNewTodos(ModelMap model) {
 		
 		String username = (String)model.get("name");
-		Todo todo = new Todo(0, username, "Default", LocalDate.now(), false);
+		Todo todo = new Todo(0, username, "", LocalDate.now(), false);
 		model.put("todo", todo);
 		return "addTodo";
 	}
 	
 	@RequestMapping(value = "add-todos", method = RequestMethod.POST)
-	public String returnNewTods(ModelMap model, @Valid Todo todo, BindingResult result) {
+	public String returnNewTodos(ModelMap model, @Valid Todo todo, BindingResult result) {
 		if(result.hasErrors()) {
 			return "addTodo";
 		}
 		
 		String username = (String)model.get("name");
-		todoService.addTodo(username, todo.getDescription(), LocalDate.now().plusYears(1), false);
+		todoService.addTodo(username, todo.getDescription(), todo.getTargetDate(), false);
 		return "redirect:list-todos";
 	}
 	
