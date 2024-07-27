@@ -9,7 +9,7 @@ public class Todo {
 	private int id;
 	private String username;
 	
-	@Size(min = 10, message = "Plaese fill at least of 10 characters")
+	@Size(min = 10, message = "Please fill at least of 10 characters")
 	private String description;
 	private LocalDate targetDate;
 	private boolean done;
@@ -54,7 +54,7 @@ public class Todo {
 		this.targetDate = targetDate;
 	}
 
-	public boolean getdone() {
+	public boolean getDone() {
 		return done;
 	}
 
