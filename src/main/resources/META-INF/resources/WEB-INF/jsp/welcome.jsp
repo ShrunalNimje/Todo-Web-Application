@@ -4,7 +4,7 @@
 			<h1>WELCOME ${name}</h1>
 		
 			<hr>
-				<h1><a href = "list-todos"> manage </a> your todo's</h1>
+				<h1><a href = "list-todos"> Manage </a> your todo's</h1>
 		</div>
 
 		<script src = "webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
