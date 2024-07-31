@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-@Controller
+// @Controller
 @SessionAttributes("name")
 public class TodoController {
 
 	@Autowired
-	private todoService todoService;
+	private TodoService todoService;
 	
-	public TodoController(todoService todoService) {
+	public TodoController(TodoService todoService) {
 		this.todoService = todoService;
 	}
 	

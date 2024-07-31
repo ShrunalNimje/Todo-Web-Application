@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import jakarta.validation.Valid;
 
 @Service
-public class todoService {
+public class TodoService {
 
 	private static List<Todo> todos = new ArrayList<Todo>();
 	private static int todoCount = 0;
