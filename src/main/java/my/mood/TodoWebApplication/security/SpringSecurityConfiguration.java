@@ -23,10 +23,12 @@ public class SpringSecurityConfiguration {
 	public InMemoryUserDetailsManager createUserDetailsManager() {
 		
 		UserDetails userDetails = createNewUser("Shrunal", "dummy");
-		UserDetails userDetails1 = createNewUser("Adam", "dummy");
-		UserDetails userDetails2 = createNewUser("Shakira", "dummy");
+		UserDetails userDetails1 = createNewUser("Adam", "Adam's Father");
+		UserDetails userDetails2 = createNewUser("Shakira", "balma");
+		UserDetails userDetails3 = createNewUser("Anushka", "saiyya");
+		UserDetails userDetails4 = createNewUser("Bhavnish", "pee");
 		
-		return new InMemoryUserDetailsManager(userDetails, userDetails1, userDetails2);
+		return new InMemoryUserDetailsManager(userDetails, userDetails1, userDetails2, userDetails3, userDetails4);
 	}
 	
 	@Bean
@@ -46,7 +48,7 @@ public class SpringSecurityConfiguration {
 		return userDetails;
 	}
 	
-	// @SuppressWarnings("removal")
+	@SuppressWarnings("removal")
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception  {
 		
